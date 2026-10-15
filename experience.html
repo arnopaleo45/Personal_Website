@@ -1,0 +1,620 @@
+<!DOCTYPE HTML>
+<!--
+    Academic CV / Experience page adapted for the Massively template.
+    Template: Massively by HTML5 UP (CCA 3.0)
+-->
+<html lang="en">
+<head>
+    <title>Experience & CV - Arnaud Rebillard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Page-specific styles: these do not change the rest of the website. -->
+    <style>
+        .cv-intro { text-align: center; max-width: 760px; margin: 0 auto 3rem; }
+        .cv-intro p { margin-bottom: 1.25rem; }
+        .cv-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
+        .cv-section { padding-top: 2.25rem; margin-top: 2.25rem; border-top: 2px solid #eeeeee; }
+        .cv-section > p.section-intro, .publications-text > p.section-intro { margin-top: -0.75rem; color: #646d75; }
+        .cv-entry { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid #e5e5e5; }
+        .cv-entry:last-child { border-bottom: 0; }
+        .cv-date { color: #717981; font-size: .85rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+        .cv-entry h3 { margin: 0 0 .35rem; }
+        .cv-entry .cv-meta { margin: 0 0 .6rem; color: #717981; font-size: .92rem; }
+        .cv-entry p:last-child { margin-bottom: 0; }
+        .cv-tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; margin: 1rem 0 0; }
+        .cv-tags li { border: 1px solid #d9d9d9; padding: .35rem .65rem; font-size: .8rem; letter-spacing: .03em; }
+        .publication-list { list-style: none; padding: 0; margin: 0; }
+        .publication-list li { padding: 1.25rem 0; border-bottom: 1px solid #e5e5e5; }
+        .publication-list li:last-child { border-bottom: 0; }
+        .publication-list h3 { margin-bottom: .35rem; font-size: 1.05rem; }
+        .publication-list p { margin: 0 0 .45rem; }
+        .pub-meta { color: #717981; font-size: .9rem; }
+        .cv-note { padding: 1rem 1.25rem; border-left: 4px solid #717981; background: rgba(144,144,144,.08); }
+        .cv-subnav { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.25rem; margin: 2rem 0 0; }
+        .cv-subnav a { font-size: .8rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; border-bottom: 0; }
+
+        /* Narrower date column inside the left text column (carousel layout) */
+        .publications-text .cv-entry { grid-template-columns: 110px minmax(0, 1fr); gap: 1.25rem; }
+
+        @media screen and (max-width: 736px) {
+            .cv-entry, .publications-text .cv-entry { grid-template-columns: 1fr; gap: .35rem; }
+            .cv-date { margin-bottom: .15rem; }
+        }
+    </style>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+
+    <header id="header">
+        <a href="index.html" class="logo">Experience</a>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">About me</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li class="active"><a href="experience.html">Experience</a></li>
+        </ul>
+        <ul class="icons">
+            <li>
+                <a href="https://www.researchgate.net/profile/Arnaud-Rebillard-3?ev=hdr_xprf"
+                   target="_blank" rel="noopener noreferrer" class="icon brands fa-researchgate">
+                    <span class="label">ResearchGate</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/arnaud.rebillard.45/"
+                   target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram">
+                    <span class="label">Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://bsky.app/profile/arnaudrebillard.bsky.social"
+                   target="_blank" rel="noopener noreferrer" class="icon brands fa-bluesky">
+                    <span class="label">Bluesky</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/arnaud-rebillard-0517931b9/"
+                   target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin">
+                    <span class="label">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:arnaud.rebillard@mfn.berlin" class="icon solid fa-envelope">
+                    <span class="label">Email</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <section class="post">
+
+            <header class="major">
+                <h1>Experience</h1>
+            </header>
+
+            <div class="cv-intro">
+
+                <div class="cv-actions">
+                    <!-- Add your PDF to the website folder and update this path. -->
+                    <a href="files/LATEST_Curriculum Vitae_A_REBILLARD2.pdf" target="_blank" class="button primary icon solid fa-download">Download CV (PDF)</a>
+                    <a href="https://www.researchgate.net/profile/Arnaud-Rebillard-3?ev=hdr_xprf"
+                       target="_blank" rel="noopener noreferrer" class="button">ResearchGate profile</a>
+                    <a href="mailto:arnaud.rebillard@mfn.berlin" target="_blank" class="button">Contact</a>
+                </div>
+                <nav class="cv-subnav" aria-label="On this page">
+                    <a href="#publications">Publications</a>
+                    <a href="#conferences">Conferences</a>
+                    <a href="#outreach">Outreach</a>
+                    <a href="#grants-awards">Grants &amp; awards</a>
+                </nav>
+            </div>
+
+
+            <!-- ===================== PUBLICATIONS ===================== -->
+            <section id="publications" class="cv-section publications-layout">
+
+                <div class="publications-text">
+                    <h2>Publications</h2>
+
+                    <ol class="publication-list">
+
+                        <li>
+                            <strong>Rebillard, A.</strong>, Dupret, V., Beznosov, P., &amp; Ahlberg, P. E. (2026).
+                            Investigating a Devonian vertebrate assemblage with synchrotron
+                            microtomography of coprolites.
+                            <em>Scientific Reports.</em>
+                            <a href="https://doi.org/10.1038/s41598-026-63718-2"
+                            target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-026-63718-2</a>
+                        </li>
+
+                        <li>
+                            Gonçalves, D., Delsahut, B., Hamann, C., &amp;
+                            <strong>Rebillard, A.</strong> (2026).
+                            New palaeontological remains from the Early Permian Réalmont Basin
+                            (Tarn, France): implications for late-Variscan palaeobiogeography
+                            and <em>Progyrolepis</em> taxonomy (Actinopterygii).
+                            <em>Fossil Record, 29</em>(2), 469–497.
+                            <a href="https://doi.org/10.3897/fr.29.197176"
+                            target="_blank" rel="noopener noreferrer">https://doi.org/10.3897/fr.29.197176</a>
+                        </li>
+
+                        <li>
+                            Marchetti, L., Logghe, A., <strong>Rebillard, A.</strong>,
+                            MacDougall, M. J., &amp; Fröbisch, J. (2026).
+                            The evolutionary significance of the earliest cloacal opening in Synapsida.
+                            <em>iScience, 29</em>(8).
+                            <a href="https://doi.org/10.1016/j.isci.2026.116752" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.isci.2026.116752</a>
+                        </li>
+
+                        <li>
+                            Marchetti, L., Logghe, A., Buchwitz, M., MacDougall, M. J.,
+                            <strong>Rebillard, A.</strong>, Martens, T., &amp; Fröbisch, J. (2026).
+                            The earliest reptile body impressions with scaly skin.
+                            <em>Current Biology, 36</em>(5), 1281–1290.
+                            <a href="https://doi.org/10.1016/j.cub.2026.01.036" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.cub.2026.01.036</a>
+                        </li>
+
+                        <li>
+                            <strong>Rebillard, A.</strong>, Jannel, A., Marchetti, L.,
+                            MacDougall, M. J., Hamann, C., Steyer, J.-S., &amp; Fröbisch, J. (2026).
+                            Early Permian terrestrial apex predator regurgitalite indicates
+                            opportunistic feeding behaviour.
+                            <em>Scientific Reports, 16</em>(1), 1087.
+                            <a href="https://doi.org/10.1038/s41598-025-33381-0"
+                            target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-025-33381-0</a>
+                        </li>
+
+                        <li>
+                            Gonçalves, D., Lemaître, G., Štamberg, S., Logghe, A.,
+                            <strong>Rebillard, A.</strong>, Pouillon, J.-M., Fernandez, V.,
+                            &amp; Steyer, J.-S. (2026).
+                            A new aeduellid from the Permian Franchesse Lagerstätte
+                            (Bourbon-l’Archambault Basin, Allier, France) highlights the
+                            evolution of Palaeozoic actinopterygians.
+                            <em>Journal of Systematic Palaeontology, 24</em>(1), 2661930.
+                            <a href="https://doi.org/10.1080/14772019.2026.2661930" target="_blank" rel="noopener noreferrer">https://doi.org/10.1080/14772019.2026.2661930</a>
+                        </li>
+
+                        <li>
+                            Logghe, A., <strong>Rebillard, A.</strong>, Houée, G.,
+                            Sánchez Gimeno, A., Courville, E., Elbaz, L., Taraba, P.-M., et al. (2025).
+                            Palaeoecology and palaeoenvironment of <em>Discosauriscus</em>
+                            Kuhn, 1933 with exceptional preservation of skin and intestine molds
+                            from the Early Permian of Franchesse (Allier, France).
+                            <em>Comptes Rendus. Palevol, 24</em>(24), 489–504.
+                            <a href="https://doi.org/10.5852/cr-palevol2025v24a24" target="_blank" rel="noopener noreferrer">https://doi.org/10.5852/cr-palevol2025v24a24</a>
+                        </li>
+
+                        <li>
+                            Gonçalves, D., Luccisano, V., <strong>Rebillard, A.</strong>,
+                            Logghe, A., Štamberg, S., &amp; Steyer, J.-S. (2025).
+                            New aquatic vertebrate and ichnological remains from the Upper
+                            Carboniferous of Decazeville (Aveyron, France): implications for the
+                            paleofauna of the French Variscan basins.
+                            <em>Comptes Rendus. Palevol, 24</em>(11).
+                            <a href="https://doi.org/10.5852/cr-palevol2025v24a11" target="_blank" rel="noopener noreferrer">https://doi.org/10.5852/cr-palevol2025v24a11</a>
+                        </li>
+
+                    </ol>
+                </div>
+
+                <div class="publication-carousel" aria-label="Palaeontological photography">
+                    <div class="carousel-track">
+                        <img src="images/carouselSula1.jpg" alt="Fossil specimen photograph" class="carousel-image active">
+                        <img src="images/carouselcloaca.jpg" alt="Palaeontological specimen" class="carousel-image">
+                        <img src="images/carouselRegurg.jpg" alt="Fossil close-up" class="carousel-image">
+                        <img src="images/carouselSula2.jpg" alt="Fossil close-up" class="carousel-image">
+                        <img src="images/carouselregurg2.jpg" alt="Fossil close-up" class="carousel-image">
+                    </div>
+                    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo">&#10094;</button>
+                    <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo">&#10095;</button>
+                </div><!-- closes .publication-carousel (was missing) -->
+
+            </section>
+
+
+            <!-- ===================== CONFERENCES ===================== -->
+            <section id="conferences" class="cv-section publications-layout">
+
+                <div class="publications-text">
+                    <h2>Conferences</h2>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">July 2026</div>
+                        <div>
+                            <h3>Exceptional soft tissue preservation from the terrestrial Early Permian of the Thuringian Forest, central Germany</h3>
+                            <p class="cv-meta">Paleo4Alps 2026 · Bolzano, Italy · 19–23 July 2026</p>
+                            <p>Jörg Fröbisch, Lorenzo Marchetti, Michael Buchwitz, Antoine Logghe, Mark MacDougall, <strong>Arnaud Rebillard</strong>, Thomas Martens. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">June–July 2026</div>
+                        <div>
+                            <h3>Pyritised intestines provide new insights into digestive taphonomy and palaeoecology in a seymouriamorph (Early Permian, France)</h3>
+                            <p class="cv-meta">European Association of Vertebrate Palaeontologists (EAVP) 2026 · Vilnius, Lithuania · 29 June–5 July 2026</p>
+                            <p><strong>Arnaud Rebillard</strong>, Antoine Logghe, Pierre Guériau, Christopher Hamann, Jörg Fröbisch, J.-Sébastien Steyer. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">November 2025</div>
+                        <div>
+                            <h3>Tetrapod feeding remains: the first bromalites from Bromacker (Early Permian, Germany)</h3>
+                            <p class="cv-meta">Society of Vertebrate Paleontology Annual Meeting · Birmingham, England · 12–15 November 2025</p>
+                            <p><strong>Arnaud Rebillard</strong>, Andréas Jannel, Lorenzo Marchetti, Mark MacDougall, Christopher Hamann, J.-Sébastien Steyer, Grace Townsend, Jörg Fröbisch. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">September 2025</div>
+                        <div>
+                            <h3>Permian feeding remains: a study of bromalites from Bromacker (Thuringia, Germany)</h3>
+                            <p class="cv-meta">Geo4Göttingen · Göttingen, Germany · 14–18 September 2025</p>
+                            <p><strong>Arnaud Rebillard</strong>, Andréas Jannel, Lorenzo Marchetti, Mark MacDougall, Christopher Hamann, J.-Sébastien Steyer, Grace Townsend, Jörg Fröbisch. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">June–July 2025</div>
+                        <div>
+                            <h3>Investigating a Devonian vertebrate assemblage with synchrotron microtomography of coprolites</h3>
+                            <p class="cv-meta">EAVP 2025 · Kraków, Poland · 30 June–5 July 2025</p>
+                            <p><strong>Arnaud Rebillard</strong>, Vincent Dupret, Pavel Beznosov, Per Erik Ahlberg. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">June–July 2025</div>
+                        <div>
+                            <h3>Exceptional tetrapod body impressions and scaly skin traces from the Early Permian Bromacker locality (Thuringia, Germany)</h3>
+                            <p class="cv-meta">EAVP 2025 · Kraków, Poland · 30 June–5 July 2025</p>
+                            <p>Lorenzo Marchetti, Antoine Logghe, Michael Buchwitz, Mark MacDougall, <strong>Arnaud Rebillard</strong>, Jörg Fröbisch. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">June 2025</div>
+                        <div>
+                            <h3>New aquatic vertebrate and ichnological remains from the Upper Carboniferous of Decazeville (Aveyron, France): implications for the palaeofauna of the French Variscan basins</h3>
+                            <p class="cv-meta">GeoTolosa 2025 · Toulouse, France · 24–27 June 2025</p>
+                            <p>Daniel Gonçalves, Vincent Luccisano, <strong>Arnaud Rebillard</strong>, Antoine Logghe, Stanislav Štamberg, J.-Sébastien Steyer. <strong>Poster.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">December 2024</div>
+                        <div>
+                            <h3>A regurgitalite from the Early Permian Bromacker locality (Thuringia, Germany)</h3>
+                            <p class="cv-meta">Palaeontological Association 68th Annual Meeting · Erlangen, Germany · 9–13 December 2024</p>
+                            <p><strong>Arnaud Rebillard</strong>, Lorenzo Marchetti, Mark MacDougall, Christopher Hamann, J.-Sébastien Steyer, Jörg Fröbisch. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">August–September 2024</div>
+                        <div>
+                            <h3>A regurgitalite from the Early Permian Bromacker locality (Thuringia, Germany)</h3>
+                            <p class="cv-meta">EAVP 2024 · Longyearbyen, Svalbard · 28 August–1 September 2024</p>
+                            <p><strong>Arnaud Rebillard</strong>, Lorenzo Marchetti, Mark MacDougall, Christopher Hamann, J.-Sébastien Steyer, Jörg Fröbisch. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">March 2024</div>
+                        <div>
+                            <h3>Coprolites and regurgitalites as time capsules: discovering palaeoecology through 3D exploration of bromalites</h3>
+                            <p class="cv-meta">Arbeitskreis Wirbeltierpaläontologie Conference · Kiel, Germany · 15–17 March 2024</p>
+                            <p><strong>Arnaud Rebillard.</strong> <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="cv-entry">
+                        <div class="cv-date">October 2022</div>
+                        <div>
+                            <h3>Investigation of a Devonian vertebrate assemblage with synchrotron microtomography of coprolites</h3>
+                            <p class="cv-meta">Fifth International Georges Cuvier Symposium · Montbéliard, France · 19–22 October 2022</p>
+                            <p><strong>Arnaud Rebillard</strong>, Per E. Ahlberg, Pavel Beznosov, Vincent Dupret. <strong>Oral presentation.</strong></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="publication-carousel" aria-label="Conference photography">
+                    <div class="carousel-track">
+                        <img src="images/conference3.jpg" alt="Presenting at a conference" class="carousel-image active">
+                        <img src="images/conference2.jpg" alt="Conference poster" class="carousel-image">
+                        <img src="images/conference1.jpg" alt="Conference talk" class="carousel-image">
+                    </div>
+                    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo">&#10094;</button>
+                    <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo">&#10095;</button>
+                </div>
+
+            </section>
+
+
+            <!-- ===================== OUTREACH ===================== -->
+            <section id="outreach" class="cv-section publications-layout">
+
+                <div class="publications-text">
+                    <h2>Outreach &amp; science communication</h2>
+                    <h3>Publications for a general audience</h3>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Paleo Proxy Spotlight – Coprolites”</h3>
+                            <p class="cv-meta">INCP Newsletter · Public-facing newsletter contribution</p>
+                            <p>Arnaud Rebillard.</p>
+                            <a href="https://conservationpaleorcn.org/wp-content/uploads/2026/10/CPN-Newsletter_-30-Sept-2026.pdf" target="_blank" rel="noopener noreferrer">Read the newsletter (PDF)</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Le plus ancien vomi fossile d'un animal terrestre nous indique le menu d’un prédateur ayant vécu il y a 290 millions d’années”</h3>
+                            <p class="cv-meta">The Conversation France · Article for a general audience</p>
+                            <p>Arnaud Rebillard.</p>
+                            <a href="https://doi.org/10.64628/AAK.dtyj5yfth" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+
+                    <h3 style="margin-top: 2rem;">Interviews for written press coverage</h3>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“This fossilized vomit is older than the dinosaurs”</h3>
+                            <p class="cv-meta">Scientific American</p>
+                            <a href="https://www.scientificamerican.com/article/this-fossilized-vomit-is-older-than-the-dinosaurs" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Fossilized vomit reveals 290-million-year-old predator’s diet”</h3>
+                            <p class="cv-meta">Science News</p>
+                            <a href="https://www.sciencenews.org/article/fossilized-vomit-reveal-predator-diet" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Le plus ancien vomi fossile terrestre connu à ce jour découvert en Allemagne”</h3>
+                            <p class="cv-meta">Franceinfo Culture</p>
+                            <a href="https://www.franceinfo.fr/culture/patrimoine/histoire/le-plus-ancien-vomi-fossile-terrestre-connu-a-ce-jour-decouvert-en-allemagne_7772513.html" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Découverte du plus ancien vomi fossile terrestre : ‘Ce sont des capsules temporelles fantastiques’, se réjouit un paléontologue français”</h3>
+                            <p class="cv-meta">Franceinfo</p>
+                            <a href="https://www.franceinfo.fr/sante/decouverte-scientifique/decouverte-du-plus-ancien-vomi-fossile-terrestre-ce-sont-des-capsules-temporelles-fantastiques-se-rejouit-un-paleontologue-francais_7774697.html" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Un vomi de 290 millions d’années est le plus vieil exemple de régurgitation fossile par un animal terrestre jamais découvert”</h3>
+                            <p class="cv-meta">Le Figaro</p>
+                            <a href="https://www.lefigaro.fr/sciences/un-vomi-de-290-millions-d-annees-est-le-plus-vieil-exemple-de-regurgitation-fossile-jamais-decouvert-20260131" target="_blank" rel="noopener noreferrer">Read the article</a>
+                        </div>
+                    </article>
+
+                    <h3 style="margin-top: 2rem;">Radio, podcast &amp; video interviews</h3>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Earth’s Ancient Hydrogen, And Fossilized Vomit”</h3>
+                            <p class="cv-meta">Science Friday</p>
+                            <a href="https://sciencefriday.com/segments/hydrogen-earths-core-fossilized-vomit/" target="_blank" rel="noopener noreferrer">Listen to the interview</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Un vomi fossilisé révèle le menu d'un prédateur il y a 290 millions d'années”</h3>
+                            <p class="cv-meta">France Culture · Avec sciences</p>
+                            <a href="https://www.radiofrance.fr/franceculture/podcasts/avec-sciences/un-vomi-fossilise-revele-le-menu-d-un-predateur-il-y-a-290-millions-d-annees-3277510" target="_blank" rel="noopener noreferrer">Listen to the programme</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Un vomi qui date de 290 millions d'années”</h3>
+                            <p class="cv-meta">RTS</p>
+                            <a href="https://www.rts.ch/audio-podcast/2026/audio/un-vomi-qui-date-de-290-millions-d-annees-29137529.html" target="_blank" rel="noopener noreferrer">Listen to the programme</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2026</div>
+                        <div>
+                            <h3>“Un Manitobain a contribué à la découverte de vomi fossilisé en Allemagne”</h3>
+                            <p class="cv-meta">Radio-Canada · L’Actuel</p>
+                            <a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/l-actuel/segments/rattrapage/2305130/vomi-fossilise-prehistorique-decouvert-en-allemagne" target="_blank" rel="noopener noreferrer">Listen to the interview</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2025</div>
+                        <div>
+                            <h3>“Was Ursaurier am Bromacker ausspuckten: Regurgitalithe und digitale Forschung”</h3>
+                            <p class="cv-meta">Museum für Naturkunde Berlin · YouTube</p>
+                            <a href="https://www.youtube.com/watch?v=AL6JNx__F3M" target="_blank" rel="noopener noreferrer">Watch the video</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="publication-carousel" aria-label="Outreach and press photography">
+                    <div class="carousel-track">
+                        <img src="images/outreach2.jpg" alt="ConferenceErlangen" class="carousel-image active">
+                        <img src="images/outreach1.jpg" alt="montbeliard" class="carousel-image">
+                        <img src="images/outreach3.jpg" alt="youtube" class="carousel-image">
+                        <img src="images/outreach4.jpg" alt="youtube" class="carousel-image">
+                    </div>
+                    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo">&#10094;</button>
+                    <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo">&#10095;</button>
+                </div>
+
+            </section>
+
+
+            <!-- ===================== GRANTS & AWARDS ===================== -->
+            <section id="grants-awards" class="cv-section publications-layout">
+
+                <div class="publications-text">
+                    <h2>Grants &amp; awards</h2>
+
+                    <h3>Research funding &amp; fellowships</h3>
+                    <article class="cv-entry">
+                        <div class="cv-date">2023–present</div>
+                        <div>
+                            <h3>Elsa Neumann Doctoral Scholarship</h3>
+                            <p class="cv-meta">Berlin State, Germany</p>
+                            <p>Doctoral funding; total amount listed in CV materials: €~52,000.</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2025</div>
+                        <div>
+                            <h3>ESRF synchrotron beam time · Project ES-1656</h3>
+                            <p class="cv-meta">European Synchrotron Radiation Facility (ESRF) · BM18 · 9 × 8-hour shifts</p>
+                            <p><em>Palaeoecology across the French Carboniferous–Permian boundary revealed by 3D exploration of coprolites.</em></p>
+                            <p>Principal investigator: <strong>Arnaud Rebillard</strong>; co-investigators: Jörg Fröbisch and J.-Sébastien Steyer.</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2024</div>
+                        <div>
+                            <h3>SOLEIL synchrotron beam time · Project 20230723</h3>
+                            <p class="cv-meta">SOLEIL Synchrotron · PUMA · 15 × 8-hour shifts</p>
+                            <p><em>Documenting palaeoecological adaptations to the drastic environmental changes of the Carboniferous–Permian boundary through the 3D exploration of fossilized feces.</em></p>
+                            <p>Principal investigator: <strong>Arnaud Rebillard</strong>.</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">March–August 2022</div>
+                        <div>
+                            <h3>ERASMUS+ Mobility Scholarship</h3>
+                            <p class="cv-meta">Uppsala, Sweden · €2,453</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">January–March 2022</div>
+                        <div>
+                            <h3>ERASMUS+ Mobility Scholarship</h3>
+                            <p class="cv-meta">Tomsk, Russian Federation · €3,270</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">August–December 2021</div>
+                        <div>
+                            <h3>ERASMUS+ Mobility Scholarship</h3>
+                            <p class="cv-meta">Uppsala, Sweden · €1,250</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">August–December 2021</div>
+                        <div>
+                            <h3>International Mobility Grant</h3>
+                            <p class="cv-meta">Graduate Programme “Science for a Changing Planet” · €3,500</p>
+                        </div>
+                    </article>
+
+                    <h3 style="margin-top: 2rem;">Awards &amp; travel grants</h3>
+                    <article class="cv-entry">
+                        <div class="cv-date">2024</div>
+                        <div>
+                            <h3>PeerJ Award — Best Oral Presentation Prize</h3>
+                            <p class="cv-meta">EAVP 2024 · Publication voucher for PeerJ</p>
+                            <a href="https://peerj.com/blog/post/115284889868/peerj-award-winners-at-eavp-2024/" target="_blank" rel="noopener noreferrer">View award announcement</a>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2025</div>
+                        <div>
+                            <h3>EAVP Annual Meeting Grant</h3>
+                            <p class="cv-meta">Kraków, Poland · €275</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2024</div>
+                        <div>
+                            <h3>EAVP Annual Meeting Grant</h3>
+                            <p class="cv-meta">Longyearbyen, Svalbard · €526</p>
+                        </div>
+                    </article>
+                    <article class="cv-entry">
+                        <div class="cv-date">2022</div>
+                        <div>
+                            <h3>Student Travel Grant</h3>
+                            <p class="cv-meta">Fifth International Georges Cuvier Symposium · Montbéliard, France · €350</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="publication-carousel" aria-label="Synchrotron and award photography">
+                    <div class="carousel-track">
+                        <img src="images/award1.jpg" alt="Synchrotron beamline" class="carousel-image active">
+                        <img src="images/award2.jpg" alt="Synchrotron experiment setup" class="carousel-image">
+                    </div>
+                    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo">&#10094;</button>
+                    <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo">&#10095;</button>
+                </div>
+
+            </section>
+
+        </section>
+    </div>
+
+    <div id="copyright">
+        <ul>
+            <li>&copy; Arnaud Rebillard</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.querySelectorAll(".publication-carousel").forEach(carousel => {
+    const images = carousel.querySelectorAll(".carousel-image");
+    const prevButton = carousel.querySelector(".carousel-prev");
+    const nextButton = carousel.querySelector(".carousel-next");
+
+    if (images.length < 2) return;
+
+    let currentIndex = 0;
+    let timer;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (index + images.length) % images.length;
+        images[currentIndex].classList.add("active");
+    }
+
+    function nextImage() { showImage(currentIndex + 1); }
+    function previousImage() { showImage(currentIndex - 1); }
+
+    function restartTimer() {
+        clearInterval(timer);
+        timer = setInterval(nextImage, 5000);
+    }
+
+    nextButton.addEventListener("click", () => { nextImage(); restartTimer(); });
+    prevButton.addEventListener("click", () => { previousImage(); restartTimer(); });
+
+    restartTimer();
+});
+</script>
+</body>
+</html>
