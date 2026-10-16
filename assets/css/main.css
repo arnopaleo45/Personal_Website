@@ -5019,3 +5019,16 @@ html { scroll-behavior: smooth; }
 .cv-section { scroll-margin-top: 1.5rem; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
+/* Centre the opening title vertically */
+#intro {
+    justify-content: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+
+/* Keep the intro comfortable on smaller screens */
+@media screen and (max-width: 736px) {
+    #intro {
+        padding: 2rem 1.5rem;
+    }
+}
