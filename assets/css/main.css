@@ -5032,3 +5032,24 @@ html { scroll-behavior: smooth; }
         padding: 2rem 1.5rem;
     }
 }
+/* Contact link hover effect */
+.contact-link {
+    display: inline-block;
+    color: #18bfef;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease,
+                transform 0.25s ease,
+                text-shadow 0.25s ease;
+}
+
+.contact-link:hover {
+    color: #008fb5;
+    transform: translateY(-2px);
+    text-shadow: 0 3px 10px rgba(24, 191, 239, 0.25);
+}
+
+.contact-link:focus-visible {
+    outline: 2px solid #18bfef;
+    outline-offset: 4px;
+}
