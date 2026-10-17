@@ -22,14 +22,14 @@
 			.compare .after { position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; clip-path: inset(0 0 0 var(--p)); }
 			.compare .bar { position: absolute; top: 0; bottom: 0; left: var(--p); width: 3px; background: #ffffff; box-shadow: 0 0 0.75rem rgba(30, 37, 45, 0.5); transform: translateX(-1.5px); pointer-events: none; }
 			.compare .knob { position: absolute; top: 50%; left: var(--p); width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; border-radius: 100%; background: #212931; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 0 0 3px #ffffff; pointer-events: none; transition: background-color 0.2s ease-in-out; }
-			.compare:hover .knob { background: #4a7fb0; }
+			.compare:hover .knob { background: rgba(0, 122, 140, 1); }
 			.compare .tag { position: absolute; bottom: 0.75rem; padding: 0 0.75rem; background: rgba(30, 37, 45, 0.75); color: #ffffff; font-family: "Source Sans Pro", Helvetica, sans-serif; font-weight: 900; font-size: 0.7rem; line-height: 1.8rem; letter-spacing: 0.075em; text-transform: uppercase; pointer-events: none; }
 			.compare .tag.l { left: 0.75rem; }
 			.compare .tag.r { right: 0.75rem; }
 			.compare input[type="range"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; opacity: 0; cursor: ew-resize; z-index: 3; }
 			.compare:focus-within { box-shadow: 0 0 0 3px #4a7fb0; }
-			.compare-caption { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #909498; margin: 0 0 0.25rem 0; }
-			.compare-source { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #909498; margin: 0 0 2rem 0; }
+			.compare-caption { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #343536; margin: 0 0 0.25rem 0; }
+			.compare-source { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #343536; margin: 0 0 2rem 0; }
 			@media screen and (max-width: 736px) {
 				.compare .knob { width: 2.5rem; height: 2.5rem; margin: -1.25rem 0 0 -1.25rem; }
 			}
