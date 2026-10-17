@@ -12,6 +12,29 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://kit.fontawesome.com/2423976647.js" crossorigin="anonymous"></script>
+		<style>
+			/* Coprolite comparison slider (uses the template palette: #212931 ink, #4a7fb0 accent) */
+			#compare { text-align: center; }
+			#compare header.major { margin-bottom: 2rem; }
+			#compare header.major p { max-width: 36rem; margin-left: auto; margin-right: auto; }
+			.compare { position: relative; overflow: hidden; line-height: 0; background: #212931; margin: 0 0 0.75rem 0; --p: 50%; }
+			.compare img { display: block; width: 100%; }
+			.compare .after { position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; clip-path: inset(0 0 0 var(--p)); }
+			.compare .bar { position: absolute; top: 0; bottom: 0; left: var(--p); width: 3px; background: #ffffff; box-shadow: 0 0 0.75rem rgba(30, 37, 45, 0.5); transform: translateX(-1.5px); pointer-events: none; }
+			.compare .knob { position: absolute; top: 50%; left: var(--p); width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; border-radius: 100%; background: #212931; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 0 0 3px #ffffff; pointer-events: none; transition: background-color 0.2s ease-in-out; }
+			.compare:hover .knob { background: #4a7fb0; }
+			.compare .tag { position: absolute; bottom: 0.75rem; padding: 0 0.75rem; background: rgba(30, 37, 45, 0.75); color: #ffffff; font-family: "Source Sans Pro", Helvetica, sans-serif; font-weight: 900; font-size: 0.7rem; line-height: 1.8rem; letter-spacing: 0.075em; text-transform: uppercase; pointer-events: none; }
+			.compare .tag.l { left: 0.75rem; }
+			.compare .tag.r { right: 0.75rem; }
+			.compare input[type="range"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; opacity: 0; cursor: ew-resize; z-index: 3; }
+			.compare:focus-within { box-shadow: 0 0 0 3px #4a7fb0; }
+			.compare-caption { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #909498; margin: 0 0 0.25rem 0; }
+			.compare-source { font-size: 0.7rem; line-height: 1.6; text-align: center; color: #909498; margin: 0 0 2rem 0; }
+			@media screen and (max-width: 736px) {
+				.compare .knob { width: 2.5rem; height: 2.5rem; margin: -1.25rem 0 0 -1.25rem; }
+			}
+
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -107,6 +130,25 @@
 
 							</article>
 
+						<!-- Coprolite slider -->
+							<section id="compare">
+								<header class="major">
+									<h2>Inside coprolites</h2>
+									<p>Drag the slider to compare the specimen with its segmented 3D X-ray microtomography data.</p>
+								</header>
+								<div class="compare" id="compare-box">
+									<img src="images/coprofull.jpg" alt="Coprolite specimen" />
+									<img class="after" src="images/coprosegmentation.jpg" alt="Segmented coprolite showing internal inclusions" />
+									<div class="bar"></div>
+									<div class="knob"><i class="fa-solid fa-arrows-left-right"></i></div>
+									<span class="tag l">Specimen</span>
+									<span class="tag r">Segmented</span>
+									<input type="range" id="compare-range" min="0" max="100" value="50" aria-label="Comparison slider: specimen on the left, segmentation on the right" />
+								</div>
+								<p class="compare-caption">Left: 3D reconstuction of the coprolites. Right: The result of their segmentation, revealing their content.</p>
+								<p class="compare-source">Coprolites studied in <a href="https://www.nature.com/articles/s41598-026-63718-2" target="_blank" rel="noopener noreferrer">Rebillard et al., 2026</a></p>
+							</section>
+
 						<!-- Posts -->
 							<section class="posts">
 
@@ -186,6 +228,43 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				(function () {
+					var box = document.getElementById('compare-box'), range = document.getElementById('compare-range');
+					function setP(v) { box.style.setProperty('--p', v + '%'); }
+					range.addEventListener('input', function () { setP(range.value); });
+
+					/* Hint: after 5 seconds, nudge the handle left and right once (only if untouched) */
+					var touched = false, played = false;
+					['pointerdown', 'keydown', 'input', 'focus'].forEach(function (ev) {
+						range.addEventListener(ev, function () { touched = true; });
+					});
+					function nudge() {
+						if (played || touched) return;
+						played = true;
+						var t0 = null, dur = 1800, base = 50;
+						requestAnimationFrame(function step(ts) {
+							if (touched) return;
+							if (t0 === null) t0 = ts;
+							var k = Math.min((ts - t0) / dur, 1),
+								v = base + 14 * Math.sin(2 * Math.PI * k) * (1 - 0.35 * k);
+							range.value = v; setP(v);
+							if (k < 1) requestAnimationFrame(step);
+							else { range.value = base; setP(base); }
+						});
+					}
+					if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+						var ready = false, visible = false;
+						function tryPlay() { if (ready && visible) nudge(); }
+						setTimeout(function () { ready = true; tryPlay(); }, 5000);
+						if ('IntersectionObserver' in window) {
+							new IntersectionObserver(function (entries) {
+								visible = entries[0].isIntersecting; tryPlay();
+							}, { threshold: 0.6 }).observe(box);
+						} else { visible = true; }
+					}
+				})();
+			</script>
 
 	</body>
 </html>
