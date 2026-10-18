@@ -5324,3 +5324,15 @@ html {
         opacity: 1;
     }
 }
+/* Image credit caption: same look on every page */
+a.image:has(+ .image-credit) { margin-bottom: 0.6rem; }   /* tightens the gap above the credit */
+
+.image-credit {
+    margin: 0 0 2.5rem 0;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    font-style: italic;
+    text-align: right;      /* the template sets paragraphs to justify */
+    color: #717981;
+}
+.image-credit a { color: inherit; }
