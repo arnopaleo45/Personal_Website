@@ -5271,3 +5271,56 @@ html {
     border-top: 0;
     background-image: none;   /* also removes the fading-gradient line, if you added it earlier */
 }
+/* ---------- Updates page: animated separators + softer images ---------- */
+
+.update-card { position: relative; }
+
+/* Separator sits in the middle of the 5rem gap, above every card except the first */
+.update-card + .update-card::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(33, 41, 49, 0.18);
+}
+
+/* Hidden state, only applied once the script has run */
+.update-card.reveal-ready + .update-card::before,
+.update-card.reveal-ready::before {
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.update-card.reveal-ready > * {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.9s ease 0.25s, transform 0.9s ease 0.25s;
+}
+
+/* Visible state */
+.update-card.reveal-ready.is-visible::before { transform: scaleX(1); }
+.update-card.reveal-ready.is-visible > * {
+    opacity: 1;
+    transform: none;
+}
+
+/* Softer image edges */
+.update-card .image {
+    border-radius: 14px;
+    overflow: hidden;
+    isolation: isolate;               /* keeps rounded clipping during the hover zoom (Safari) */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.35),
+        0 8px 30px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .update-card.reveal-ready::before,
+    .update-card.reveal-ready > * {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
