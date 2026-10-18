@@ -5158,3 +5158,66 @@ html {
     outline: 2px solid var(--hover, #007a8c);
     outline-offset: 4px;
 }
+/* ---------- Feathered photo edges ---------- */
+
+/* Remove the dark box behind the photos so the fade reveals the page */
+.publication-carousel {
+    background: transparent;
+}
+
+/* ---------- Softer carousel edge ---------- */
+.publication-carousel {
+    border-radius: 14px;                      /* rounded corners instead of hard ones */
+    overflow: hidden;                         /* clips the photos to the rounded shape */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.35),  /* faint light rim, blends the edge */
+        0 6px 24px rgba(0, 0, 0, 0.18);       /* soft shadow so it floats */
+}
+
+/* Arrows sit on the visible part of the photo, not the faded edge */
+.publication-carousel .carousel-prev { left: 12%; }
+.publication-carousel .carousel-next { right: 12%; }
+#main .carousel-arrow,
+#main .carousel-arrow:hover {
+    color: #ffffff !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+/* ---------- Vertical carousel with reflection ---------- */
+
+/* Taller, portrait shape (was square) */
+.publications-layout .publication-carousel {
+    aspect-ratio: 4 / 5;
+    margin-bottom: 3.5rem;   /* leaves room for the reflection below */
+
+    /* Mirror image under the carousel, fading out (Chrome, Edge, Safari) */
+    -webkit-box-reflect: below 4px
+        linear-gradient(to bottom, transparent 72%, rgba(255, 255, 255, 0.28) 100%);
+}
+
+/* Soft sheen at the top and bottom edges, drawn over the photos */
+.publication-carousel::before,
+.publication-carousel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    z-index: 1;               /* above photos, below arrows (z-index 2) */
+    pointer-events: none;
+}
+.publication-carousel::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.28), transparent);
+}
+.publication-carousel::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.22), transparent);
+}
+
+/* On phones the carousel is stacked, so keep it less tall */
+@media screen and (max-width: 900px) {
+    .publications-layout .publication-carousel { aspect-ratio: 1 / 1; }
+}
+/* ---------- Arrows closer to the edges ---------- */
+#main .publication-carousel .carousel-prev { left: 4px; }
+#main .publication-carousel .carousel-next { right: 4px; }
