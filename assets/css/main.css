@@ -5221,3 +5221,53 @@ html {
 /* ---------- Arrows closer to the edges ---------- */
 #main .publication-carousel .carousel-prev { left: 4px; }
 #main .publication-carousel .carousel-next { right: 4px; }
+
+/* ---------- Scroll animation between categories ---------- */
+
+/* Replace the static border with a line that can animate */
+.cv-section {
+    position: relative;
+    border-top: 0;
+}
+.cv-section::before {
+    content: "";
+    position: absolute;      /* absolute, so it doesn't become a grid item */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #eeeeee;
+}
+
+/* Hidden state, only applied once the script has run */
+.cv-section.reveal-ready::before {
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.cv-section.reveal-ready > * {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.9s ease 0.25s, transform 0.9s ease 0.25s;
+}
+
+/* Visible state */
+.cv-section.reveal-ready.is-visible::before { transform: scaleX(1); }
+.cv-section.reveal-ready.is-visible > * {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cv-section.reveal-ready::before,
+    .cv-section.reveal-ready > * {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+/* Remove the old static line so only the animated one remains */
+#main .cv-section {
+    border-top: 0;
+    background-image: none;   /* also removes the fading-gradient line, if you added it earlier */
+}
