@@ -593,13 +593,25 @@ document.querySelectorAll(".publication-carousel").forEach(carousel => {
 
     if (images.length < 2) return;
 
+    // Mirrored copy used as the reflection
+    const reflection = document.createElement("div");
+    reflection.className = "carousel-reflection";
+    reflection.setAttribute("aria-hidden", "true");
+    const trackClone = carousel.querySelector(".carousel-track").cloneNode(true);
+    trackClone.querySelectorAll("img").forEach(img => img.alt = "");
+    reflection.appendChild(trackClone);
+    carousel.appendChild(reflection);
+    const reflectedImages = trackClone.querySelectorAll(".carousel-image");
+
     let currentIndex = 0;
     let timer;
 
     function showImage(index) {
         images[currentIndex].classList.remove("active");
+        reflectedImages[currentIndex].classList.remove("active");
         currentIndex = (index + images.length) % images.length;
         images[currentIndex].classList.add("active");
+        reflectedImages[currentIndex].classList.add("active");
     }
 
     function nextImage() { showImage(currentIndex + 1); }
@@ -615,26 +627,6 @@ document.querySelectorAll(".publication-carousel").forEach(carousel => {
 
     restartTimer();
 });
-</script>
-<script>
-(function () {
-    var sections = document.querySelectorAll(".cv-section");
-    if (!("IntersectionObserver" in window)) return;   // no support: leave everything visible
-
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);       // animate once only
-            }
-        });
-    }, { threshold: 0.08 });
-
-    sections.forEach(function (section) {
-        section.classList.add("reveal-ready");
-        observer.observe(section);
-    });
-})();
 </script>
 </body>
 </html>

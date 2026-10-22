@@ -2934,11 +2934,35 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     justify-self: stretch;
     width: 100%;
     aspect-ratio: 4 / 5;                       /* portrait */
-    overflow: hidden;
+    overflow: visible;
     background: #111;
-    margin-bottom: 3.5rem;                     /* room for the reflection */
-    -webkit-box-reflect: below 4px
-        linear-gradient(to bottom, transparent 72%, rgba(255, 255, 255, 0.28) 100%);
+    margin-bottom: 3.5rem;  
+	/* Clipping moves from the carousel to the track, so the reflection can sit outside it */
+.publications-layout .publication-carousel {
+    overflow: visible;
+}
+
+.publication-carousel .carousel-track {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.publication-carousel::before { border-radius: 14px 14px 0 0; }
+.publication-carousel::after  { border-radius: 0 0 14px 14px; }
+
+/* Mirrored copy under the carousel, fading out */
+.carousel-reflection {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 100%;
+    transform: scaleY(-1);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 72%, rgba(0, 0, 0, 0.28) 100%);
+    mask-image: linear-gradient(to bottom, transparent 72%, rgba(0, 0, 0, 0.28) 100%);
+    pointer-events: none;
+}
+                   /* room for the reflection */
 }
 
 /* Soft sheen at the top and bottom edges, drawn over the photos */
