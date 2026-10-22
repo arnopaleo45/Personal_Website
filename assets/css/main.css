@@ -5336,3 +5336,71 @@ a.image:has(+ .image-credit) { margin-bottom: 0.6rem; }   /* tightens the gap ab
     color: #717981;
 }
 .image-credit a { color: inherit; }
+/* ---------- Buttons (all pages): sliding fill on hover ---------- */
+
+#main .button:not(.primary) {
+    background-image: linear-gradient(var(--hover, #007a8c), var(--hover, #007a8c));
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;              /* fill starts empty */
+    box-shadow: inset 0 0 0 2px #212931;   /* keeps the outline */
+    color: #212931 !important;
+    transition: background-size 0.35s ease-in-out,
+                color 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+}
+
+#main .button:not(.primary):hover {
+    background-size: 100% 100%;            /* fill slides in from the left */
+    box-shadow: inset 0 0 0 2px var(--hover, #007a8c);
+    color: #ffffff !important;
+}
+
+#main .button:focus-visible {
+    outline: 2px solid var(--hover, #007a8c);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main .button { transition: none; }
+}
+/* ---------- Contact link: gradient underline swap on hover ---------- */
+
+.contact-link,
+.contact-link:hover,
+.contact-link:focus-visible {
+    color: inherit !important;       /* cancels the teal colour set by earlier rules */
+    text-decoration: none;
+    border-bottom: 0;                /* removes the template's dotted underline */
+    text-shadow: none;
+    transform: none;                 /* removes the earlier lift effect */
+}
+
+.contact-link {
+    display: inline-block;
+    padding-bottom: 2px;
+    background:
+        linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    background-size: 0 3px, 100% 3px;
+}
+
+.contact-link:focus-visible {
+    outline: 2px solid var(--hover, #007a8c);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-link { transition: none; }
+}
