@@ -128,13 +128,19 @@ html {
 body {
     -webkit-text-size-adjust: none;
     color: #212931;
-    background-color: #071F20;
+}
+
+/* Fixed background on its own layer, so it isn't repainted while scrolling */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     background-image:
         radial-gradient(ellipse at 55% 30%, rgba(0, 120, 75, 0.65) 0%, rgba(0, 70, 60, 0.35) 35%, transparent 70%),
         radial-gradient(ellipse at 15% 15%, rgba(0, 50, 45, 0.5) 0%, transparent 55%);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 /* Disables all animations until the page has loaded */
