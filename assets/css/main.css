@@ -46,7 +46,7 @@
    ========================================================================== */
 
 :root {
-    --hover: #007a8c;
+    --hover: #E74536;
 }
 
 
@@ -116,7 +116,7 @@ input, select, textarea {
 
 html {
     box-sizing: border-box;
-    background-color: #071F20;
+    background-color: #1A231A;
     font-size: 16pt;
     scroll-behavior: smooth;
 }
@@ -127,7 +127,7 @@ html {
 
 body {
     -webkit-text-size-adjust: none;
-    color: #212931;
+    color: #1A231A;
 }
 
 /* Fixed background on its own layer, so it isn't repainted while scrolling */
@@ -137,8 +137,8 @@ body::before {
     inset: 0;
     z-index: -1;
     background-image:
-        radial-gradient(ellipse at 55% 30%, rgba(0, 120, 75, 0.65) 0%, rgba(0, 70, 60, 0.35) 35%, transparent 70%),
-        radial-gradient(ellipse at 15% 15%, rgba(0, 50, 45, 0.5) 0%, transparent 55%);
+        radial-gradient(ellipse at 55% 30%, rgba(75, 98, 75, 0.65) 0%, rgba(50, 68, 50, 0.35) 35%, transparent 70%),
+        radial-gradient(ellipse at 15% 15%, rgba(40, 55, 40, 0.5) 0%, transparent 55%);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -169,23 +169,23 @@ body, input, select, textarea {
 }
 
 input, select, textarea {
-    color: #212931;
+    color: #1A231A;
 }
 
 a {
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border-bottom: dotted 1px rgba(33, 41, 49, 0.5);
-    color: #212931;
+    border-bottom: dotted 1px rgba(26, 35, 26, 0.5);
+    color: #1A231A;
     text-decoration: none;
 }
 
 a:hover {
     border-bottom-color: transparent;
-    color: #18bfef !important;
+    color: #E74536 !important;
 }
 
 strong, b {
-    color: #212931;
+    color: #1A231A;
     font-weight: 600;
 }
 
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.075em;
     text-transform: uppercase;
     margin: 0 0 1rem 0;
-    color: #212931;
+    color: #1A231A;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -591,8 +591,8 @@ button,
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    box-shadow: inset 0 0 0 2px #212931;
-    color: #212931 !important;
+    box-shadow: inset 0 0 0 2px #1A231A;
+    color: #1A231A !important;
     cursor: pointer;
     display: inline-block;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -718,8 +718,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-    box-shadow: inset 0 0 0 2px #18bfef;
-    color: #18bfef !important;
+    box-shadow: inset 0 0 0 2px #E74536;
+    color: #E74536 !important;
 }
 
 input[type="submit"].primary,
@@ -727,9 +727,9 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-    background-color: #212931;
+    background-color: #1A231A;
     box-shadow: none;
-    color: #ffffff !important;
+    color: #F5F5F1 !important;
 }
 
 input[type="submit"].primary:hover,
@@ -737,7 +737,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-    background-color: #18bfef;
+    background-color: #E74536;
 }
 
 
@@ -790,7 +790,7 @@ label {
     font-size: 0.8rem;
     text-transform: uppercase;
     margin: 0 0 0.75rem 0;
-    color: #212931;
+    color: #1A231A;
 }
 
 @media screen and (max-width: 980px) {
@@ -828,7 +828,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-    border-color: #18bfef;
+    border-color: #E74536;
 }
 
 input[type="text"],
@@ -856,8 +856,8 @@ select::-ms-expand {
 }
 
 select option {
-    background-color: #ffffff;
-    color: #212931;
+    background-color: #F5F5F1;
+    color: #1A231A;
 }
 
 .select-wrapper:before {
@@ -893,7 +893,7 @@ input[type="radio"] + label {
     padding-left: 2.8rem;
     padding-right: 1rem;
     position: relative;
-    color: #212931;
+    color: #1A231A;
 }
 
 input[type="checkbox"] + label:before,
@@ -926,14 +926,14 @@ input[type="radio"] + label:before {
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
     content: '\f00c';
-    background-color: #212931;
-    border-color: #212931;
-    color: #ffffff;
+    background-color: #1A231A;
+    border-color: #1A231A;
+    color: #F5F5F1;
 }
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-    border-color: #18bfef;
+    border-color: #E74536;
 }
 
 ::placeholder {
@@ -1209,7 +1209,7 @@ ul.icons li .icon:before {
 }
 
 ul.icons li a.icon:hover:before {
-    color: #18bfef;
+    color: #E74536;
 }
 
 ul.icons.alt li .icon:before {
@@ -1219,7 +1219,7 @@ ul.icons.alt li .icon:before {
 }
 
 ul.icons.alt li a.icon:hover:before {
-    box-shadow: inset 0 0 0 2px #18bfef;
+    box-shadow: inset 0 0 0 2px #E74536;
 }
 
 
@@ -1394,7 +1394,7 @@ table th {
     padding: 0 0.75rem 0.75rem 0.75rem;
     text-align: left;
     text-transform: uppercase;
-    color: #212931;
+    color: #1A231A;
 }
 
 @media screen and (max-width: 980px) {
@@ -1481,7 +1481,7 @@ table.alt tfoot {
     padding: 0 1em;
     border: 1px solid #eeeeee;
     font-size: 0.85em;
-    color: #212931 !important;
+    color: #1A231A !important;
 }
 
 .pagination span {
@@ -1515,19 +1515,19 @@ table.alt tfoot {
 }
 
 .pagination a:hover {
-    color: #18bfef !important;
-    border-color: #18bfef;
+    color: #E74536 !important;
+    border-color: #E74536;
     z-index: 1;
 }
 
 .pagination a:hover + a,
 .pagination a:hover + span {
-    border-left-color: #18bfef;
+    border-left-color: #E74536;
 }
 
 .pagination a.active {
-    background: #212931;
-    color: #ffffff !important;
+    background: #1A231A;
+    color: #F5F5F1 !important;
 }
 
 @media screen and (max-width: 980px) {
@@ -1573,7 +1573,7 @@ table.alt tfoot {
     pointer-events: none;
     transition: opacity 1s ease-in-out;
     transition-delay: 0.75s;
-    background: #071F20;
+    background: #1A231A;
     content: '';
     display: block;
     height: 100%;
@@ -1605,30 +1605,30 @@ body.is-preload #wrapper.fade-in:before {
 :is(#intro, #header, #nav, #copyright) strong,
 :is(#intro, #header, #nav, #copyright) b,
 :is(#intro, #header, #nav, #copyright) :is(h1, h2, h3, h4, h5, h6) {
-    color: #ffffff;
+    color: #F5F5F1;
 }
 
 :is(#intro, #header, #nav, #copyright) a {
-    color: #ffffff;
+    color: #F5F5F1;
     border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 :is(#intro, #header, #nav, #copyright) a:hover {
     border-bottom-color: transparent;
-    color: #18bfef !important;
+    color: #E74536 !important;
 }
 
 :is(#intro, #header, #nav, #copyright) blockquote {
-    border-left-color: #ffffff;
+    border-left-color: #F5F5F1;
 }
 
 :is(#intro, #header, #nav, #copyright) code {
     background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff;
+    border-color: #F5F5F1;
 }
 
 :is(#intro, #header, #nav, #copyright) hr {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #F5F5F1;
 }
 
 
@@ -1637,7 +1637,7 @@ body.is-preload #wrapper.fade-in:before {
    ========================================================================== */
 
 #intro {
-    color: #ffffff;
+    color: #F5F5F1;
     padding: 3rem 2rem;
     box-sizing: border-box;
     align-items: center;
@@ -1658,8 +1658,8 @@ body.is-preload #wrapper.fade-in:before {
 #intro button,
 #intro .button {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 2px #F5F5F1;
+    color: #F5F5F1 !important;
 }
 
 #intro input[type="submit"]:hover,
@@ -1667,8 +1667,8 @@ body.is-preload #wrapper.fade-in:before {
 #intro input[type="button"]:hover,
 #intro button:hover,
 #intro .button:hover {
-    box-shadow: inset 0 0 0 2px #18bfef;
-    color: #18bfef !important;
+    box-shadow: inset 0 0 0 2px #E74536;
+    color: #E74536 !important;
 }
 
 #intro input[type="submit"].primary,
@@ -1676,9 +1676,9 @@ body.is-preload #wrapper.fade-in:before {
 #intro input[type="button"].primary,
 #intro button.primary,
 #intro .button.primary {
-    background-color: #ffffff;
+    background-color: #F5F5F1;
     box-shadow: none;
-    color: #1e252d !important;
+    color: #1A231A !important;
 }
 
 #intro input[type="submit"].primary:hover,
@@ -1686,7 +1686,7 @@ body.is-preload #wrapper.fade-in:before {
 #intro input[type="button"].primary:hover,
 #intro button.primary:hover,
 #intro .button.primary:hover {
-    background-color: #18bfef;
+    background-color: #E74536;
 }
 
 #intro h1 {
@@ -1781,7 +1781,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
    ========================================================================== */
 
 #header {
-    color: #ffffff;
+    color: #F5F5F1;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -1800,7 +1800,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     pointer-events: auto;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #F5F5F1;
     border-width: 5px !important;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 2.25rem;
@@ -1813,8 +1813,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #header .logo:hover {
-    border-color: #18bfef !important;
-    color: #18bfef !important;
+    border-color: #E74536 !important;
+    color: #E74536 !important;
 }
 
 @media screen and (max-width: 980px) {
@@ -1843,7 +1843,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
    ========================================================================== */
 
 #nav {
-    color: #ffffff;
+    color: #F5F5F1;
     display: flex;
     transition: transform 1s ease, opacity 1s ease;
     background: rgba(255, 255, 255, 0.175);
@@ -1859,19 +1859,19 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #nav ul.divided li {
-    border-top-color: #ffffff;
+    border-top-color: #F5F5F1;
 }
 
 #nav ul.icons li a.icon:hover:before {
-    color: #18bfef;
+    color: #E74536;
 }
 
 #nav ul.icons.alt li .icon:before {
-    box-shadow: inset 0 0 0 2px #ffffff;
+    box-shadow: inset 0 0 0 2px #F5F5F1;
 }
 
 #nav ul.icons.alt li a.icon:hover:before {
-    box-shadow: inset 0 0 0 2px #18bfef;
+    box-shadow: inset 0 0 0 2px #E74536;
 }
 
 #nav ul.links {
@@ -1906,15 +1906,15 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #nav ul.links li.active {
-    background-color: #ffffff;
+    background-color: #F5F5F1;
 }
 
 #nav ul.links li.active a {
-    color: #1e252d;
+    color: #1A231A;
 }
 
 #nav ul.links li.active a:hover {
-    color: #18bfef !important;
+    color: #E74536 !important;
 }
 
 #nav ul.icons {
@@ -1933,7 +1933,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
    ========================================================================== */
 
 #main {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(245, 245, 241, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
     position: relative;
@@ -2099,7 +2099,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #footer a:hover {
     border-bottom-color: transparent;
-    color: #18bfef !important;
+    color: #E74536 !important;
 }
 
 #footer blockquote { border-left-color: #e2e2e2; }
@@ -2126,8 +2126,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #footer input[type="button"]:hover,
 #footer button:hover,
 #footer .button:hover {
-    box-shadow: inset 0 0 0 2px #18bfef;
-    color: #18bfef !important;
+    box-shadow: inset 0 0 0 2px #E74536;
+    color: #E74536 !important;
 }
 
 #footer input[type="submit"].primary,
@@ -2145,7 +2145,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #footer input[type="button"].primary:hover,
 #footer button.primary:hover,
 #footer .button.primary:hover {
-    background-color: #18bfef;
+    background-color: #E74536;
 }
 
 #footer input[type="text"],
@@ -2161,7 +2161,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #footer input[type="email"]:focus,
 #footer select:focus,
 #footer textarea:focus {
-    border-color: #18bfef;
+    border-color: #E74536;
 }
 
 #footer select {
@@ -2196,7 +2196,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #footer input[type="checkbox"]:focus + label:before,
 #footer input[type="radio"]:focus + label:before {
-    border-color: #18bfef;
+    border-color: #E74536;
 }
 
 #footer ::placeholder,
@@ -2209,7 +2209,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #footer ul.icons li a.icon:hover:before {
-    color: #18bfef;
+    color: #E74536;
 }
 
 #footer ul.icons.alt li .icon:before {
@@ -2217,7 +2217,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #footer ul.icons.alt li a.icon:hover:before {
-    box-shadow: inset 0 0 0 2px #18bfef;
+    box-shadow: inset 0 0 0 2px #E74536;
 }
 
 #footer header.major .date:before,
@@ -2255,14 +2255,14 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #footer .pagination a:hover {
-    color: #18bfef !important;
-    border-color: #18bfef;
+    color: #E74536 !important;
+    border-color: #E74536;
     z-index: 1;
 }
 
 #footer .pagination a:hover + a,
 #footer .pagination a:hover + span {
-    border-left-color: #18bfef;
+    border-left-color: #E74536;
 }
 
 #footer .pagination a.active {
@@ -2477,7 +2477,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     top: 0.75rem;
     right: 0.75rem;
     border: 0;
-    color: #ffffff;
+    color: #F5F5F1;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 0.9rem;
     font-weight: 900;
@@ -2495,11 +2495,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #navPanelToggle.alt {
     background-color: rgba(255, 255, 255, 0.875);
     box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-    color: #212931;
+    color: #1A231A;
 }
 
 #navPanelToggle.alt:hover {
-    background-color: #ffffff;
+    background-color: #F5F5F1;
 }
 
 #navPanel {
@@ -2507,9 +2507,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
     display: none;
     -webkit-overflow-scrolling: touch;
-    background: #ffffff;
+    background: #F5F5F1;
     box-shadow: none;
-    color: #212931;
+    color: #1A231A;
     height: 100%;
     max-width: 80%;
     overflow-y: auto;
@@ -2571,7 +2571,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanel .close:hover {
-    color: #212931;
+    color: #1A231A;
 }
 
 @media screen and (max-width: 980px) {
@@ -2639,13 +2639,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main button.primary:hover,
 #main input[type="submit"].primary:hover {
     background-color: var(--hover);
-    color: #ffffff !important;
+    color: #F5F5F1 !important;
 }
 
 #main .pagination a:hover {
     background: var(--hover);
     border-color: var(--hover);
-    color: #ffffff !important;
+    color: #F5F5F1 !important;
 }
 
 #main ul.icons li a.icon:hover:before {
@@ -2658,12 +2658,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
    -------------------------------------------------------------------------- */
 
 #main .button:not(.primary) {
-    background-image: linear-gradient(var(--hover, #007a8c), var(--hover, #007a8c));
+    background-image: linear-gradient(var(--hover, #E74536), var(--hover, #E74536));
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 0% 100%;              /* fill starts empty */
-    box-shadow: inset 0 0 0 2px #212931;   /* keeps the outline */
-    color: #212931 !important;
+    box-shadow: inset 0 0 0 2px #1A231A;   /* keeps the outline */
+    color: #1A231A !important;
     transition: background-size 0.35s ease-in-out,
                 color 0.3s ease-in-out,
                 box-shadow 0.3s ease-in-out;
@@ -2671,12 +2671,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #main .button:not(.primary):hover {
     background-size: 100% 100%;            /* fill slides in from the left */
-    box-shadow: inset 0 0 0 2px var(--hover, #007a8c);
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 2px var(--hover, #E74536);
+    color: #F5F5F1 !important;
 }
 
 #main .button:focus-visible {
-    outline: 2px solid var(--hover, #007a8c);
+    outline: 2px solid var(--hover, #E74536);
     outline-offset: 4px;
 }
 
@@ -2697,11 +2697,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     text-decoration: none;
     border-bottom: 0;
     background:
-        linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
-        linear-gradient(to right,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
-            rgba(0, 100, 200, 1));
+        linear-gradient(to right, #4B624B, #4B624B),
+        linear-gradient(to right, #E74536, #E74536);
     background-size: 100% 3px, 0 3px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -2715,7 +2712,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 .contact-link:focus-visible {
-    outline: 2px solid var(--hover, #007a8c);
+    outline: 2px solid var(--hover, #E74536);
     outline-offset: 4px;
 }
 
@@ -2774,7 +2771,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     left: 0;
     width: 100%;
     height: 2px;
-    background: rgba(33, 41, 49, 0.18);
+    background: rgba(26, 35, 26, 0.18);
 }
 
 /* Scroll reveal: hidden state (only applied once the script has run) */
@@ -3036,7 +3033,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #main .carousel-arrow,
 #main .carousel-arrow:hover {
-    color: #ffffff !important;
+    color: #F5F5F1 !important;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 
